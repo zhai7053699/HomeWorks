@@ -21,6 +21,16 @@ end
 
 -- print("45"*"2")
 
-a = {}
-a[1000] = 1
-print(#a)
+-- a = {}
+-- a[1000] = 1
+-- print(#a)
+
+-- 数字型for循环
+-- for i = 10,1,-1
+-- 	do
+-- 	print(i)
+-- end
+
+--print(8*9,9/8)
+local a = math.sin(3) + math.cos(10)
+--print(os.date())
