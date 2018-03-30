@@ -1,5 +1,6 @@
 var o = {
 	p:'hello'
+	s:'world'
 }
 
 // console.log(o.p)
