@@ -29,15 +29,13 @@
     ///申请相册权限
 //    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
 //    }];
-    float button_x = self.view.center.x * 0.5;
-    float button_y = self.view.center.y * 0.5;
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"视频加水印" forState:UIControlStateNormal];
     [button.titleLabel sizeToFit];
     [button addTarget:self action:@selector(addWater) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    button.frame = CGRectMake(button_x, button_y - 100, 100, 50);
+    button.frame = CGRectMake(SCREEN_WIDTH*0.5-50, 100, 100, 50);
     [button setBackgroundColor:[UIColor orangeColor]];
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -45,7 +43,7 @@
     [button2 sizeToFit];
     [button2 addTarget:self action:@selector(cropWater) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
-    button2.frame = CGRectMake(button_x, button_y, 100, 50);
+    button2.frame = CGRectMake(SCREEN_WIDTH*0.5-50, 200, 100, 50);
     [button2 setBackgroundColor:[UIColor orangeColor]];
     
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -53,8 +51,9 @@
     [button3 sizeToFit];
     [button3 addTarget:self action:@selector(addVideo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button3];
-    button3.frame = CGRectMake(button_x, button_y + 100, 150, 50);
+    button3.frame = CGRectMake(SCREEN_WIDTH*0.5-75, 300, 150, 50);
     [button3 setBackgroundColor:[UIColor orangeColor]];
+    
 }
 
 - (void) addWater {

@@ -13,5 +13,9 @@
 //#import "Masonry.h"
 #import "GPUImage.h"
 #import "SVProgressHUD.h"
+#import <MediaPlayer/MediaPlayer.h> // 本地音乐
+
+#define SCREEN_WIDTH                    ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT                   ([UIScreen mainScreen].bounds.size.height)
 
 #endif /* CommonHeader_h */

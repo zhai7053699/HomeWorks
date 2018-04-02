@@ -10,6 +10,7 @@
 #import "CommonHeader.h"
 #import<MobileCoreServices/MobileCoreServices.h>
 
+
 @interface AddVideo ()
 {
     // AVFoundation
@@ -40,7 +41,8 @@
     [button.titleLabel sizeToFit];
     [button addTarget:self action:@selector(addVideo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    button.frame = CGRectMake(100, 100, 150, 50);
+    button.frame = CGRectMake(SCREEN_WIDTH*0.5-75, 100, 150, 50);
+    
     [button setBackgroundColor:[UIColor redColor]];
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -48,8 +50,17 @@
     [button2 sizeToFit];
     [button2 addTarget:self action:@selector(addMusic) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
-    button2.frame = CGRectMake(100, 200, 150, 50);
+    button2.frame = CGRectMake(SCREEN_WIDTH*0.5-75, 200, 150, 50);
     [button2 setBackgroundColor:[UIColor redColor]];
+    
+    UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button3 setTitle:@"读取本地音乐" forState:UIControlStateNormal];
+    [button3.titleLabel sizeToFit];
+    [button3 addTarget:self action:@selector(readMusic) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button3];
+    button3.frame = CGRectMake(SCREEN_WIDTH*0.5-75, 300, 150, 50);
+    [button3 setBackgroundColor:[UIColor redColor]];
+    
 }
 
 - (void) addVideo {
@@ -57,6 +68,61 @@
 //    NSURL *videoPath2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"selfH" ofType:@"MOV"]];
 //    [self addFirstVideo:videoPath1 andSecondVideo:videoPath2 withMusic:nil];
     [self readLocalVideo];
+}
+
+- (void) readMusic {
+    // 获取了工程中的mp3文件，从结果看还是输出了工程中的音乐music.mp3。
+//    NSArray *mp3Array = [NSBundle pathsForResourcesOfType:@"mp3" inDirectory:[[NSBundle mainBundle] resourcePath]];
+//    NSInteger cou = mp3Array.count;
+//    for (NSString *filePath in mp3Array) {
+//        NSURL *url = [NSURL fileURLWithPath:filePath];
+//        NSString *MusicName = [filePath lastPathComponent];
+//        AVURLAsset *mp3Asset = [AVURLAsset URLAssetWithURL:url options:nil];
+//        NSLog(@"音乐名字：%@ 音乐Asset：%@", MusicName,mp3Asset);
+//
+//    }
+    
+    MPMusicPlayerController*musicPlayer=[MPMusicPlayerController systemMusicPlayer];
+//    [musicPlayer setRepeatMode:MPMusicShuffleModeSongs]; // 随机播放
+    
+    [musicPlayer beginGeneratingPlaybackNotifications];//开启通知，否则监控不到MPMusicPlayerController的通知
+    // 获取所有播放歌曲
+    MPMediaQuery *mediaQueue = [MPMediaQuery songsQuery];
+    // 手动选择音乐源
+//    MPMediaPickerController * mediaPicker = [[MPMediaPickerController alloc] initWithMediaTypes: MPMediaTypeAny];
+//    mediaPicker.allowsPickingMultipleItems=NO;//允许多选
+//    mediaPicker.prompt=@"请选择要播放的音乐";
+//    mediaPicker.delegate=self;//设置选择器代理
+    
+    [musicPlayer setQueueWithQuery:mediaQueue];//用播放队列设置媒体源
+    
+    // 读取不到歌曲
+//    NSMutableArray *array=[NSMutableArray array];
+//    for (MPMediaItem *item in mediaQueue.items) {
+//        [array addObject:item];
+//        NSLog(@"mpmediaItem is : %@",item);
+//    }
+    
+    [musicPlayer play];
+    
+    [MPMusicPlayerController applicationMusicPlayer]; // 应用退出后停止播放
+//    [musicPlayer setQueueWithItemCollection:mediaItemCollection];//用播放集设置媒体源
+    
+}
+
+// 没有检索到iTurns 和 酷狗音乐
+- (void) QueryAllMusic
+{
+    MPMediaQuery *everything = [MPMediaQuery songsQuery];
+    NSLog(@"Logging items from a generic query...");
+    NSArray *itemsFromGenericQuery = [everything items];
+    NSLog(@"count = %lu", (unsigned long)itemsFromGenericQuery.count);
+    for (MPMediaItem *song in itemsFromGenericQuery)
+    {
+        NSString *songTitle = [song valueForProperty: MPMediaItemPropertyTitle];
+        NSString *songArtist = [song valueForProperty:MPMediaItemPropertyArtist];
+        NSLog (@"Title:%@, Aritist:%@", songTitle, songArtist);
+    }
 }
 
 - (void) addMusic {

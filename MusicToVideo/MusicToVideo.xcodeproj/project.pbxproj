@@ -195,6 +195,7 @@
 		178F3F35207104A70090761E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 178F3F2E207104A70090761E /* SVProgressHUD.bundle */; };
 		178F3F36207104A70090761E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 178F3F30207104A70090761E /* SVProgressHUD.m */; };
 		178F3F37207104A70090761E /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 178F3F32207104A70090761E /* SVRadialGradientLayer.m */; };
+		178F3F3A2071D2440090761E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178F3F392071D2440090761E /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -557,6 +558,7 @@
 		178F3F30207104A70090761E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		178F3F31207104A70090761E /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		178F3F32207104A70090761E /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		178F3F392071D2440090761E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -564,6 +566,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178F3F3A2071D2440090761E /* MediaPlayer.framework in Frameworks */,
 				178F3D262070EED20090761E /* AVFoundation.framework in Frameworks */,
 				178F3D242070E6450090761E /* Photos.framework in Frameworks */,
 				178F3B3E2070E2D10090761E /* MobileCoreServices.framework in Frameworks */,
@@ -618,6 +621,7 @@
 		178F3B362070E24C0090761E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				178F3F392071D2440090761E /* MediaPlayer.framework */,
 				178F3D252070EED10090761E /* AVFoundation.framework */,
 				178F3D232070E6450090761E /* Photos.framework */,
 				178F3B3D2070E2D10090761E /* MobileCoreServices.framework */,

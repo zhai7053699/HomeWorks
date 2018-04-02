@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface AddVideo : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface AddVideo : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,MPMediaPickerControllerDelegate>
 {
     
 }
