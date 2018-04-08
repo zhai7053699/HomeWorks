@@ -37,7 +37,7 @@
 
 - (void) createUI {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"选取本地视频" forState:UIControlStateNormal];
+    [button setTitle:@"选取视频" forState:UIControlStateNormal];
     [button.titleLabel sizeToFit];
     [button addTarget:self action:@selector(addVideo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
@@ -46,17 +46,17 @@
     [button setBackgroundColor:[UIColor redColor]];
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button2 setTitle:@"添加背景音乐" forState:UIControlStateNormal];
+    [button2 setTitle:@"添加音乐" forState:UIControlStateNormal];
     [button2 sizeToFit];
-    [button2 addTarget:self action:@selector(addMusic) forControlEvents:UIControlEventTouchUpInside];
+//    [button2 addTarget:self action:@selector(null) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
     button2.frame = CGRectMake(SCREEN_WIDTH*0.5-75, 200, 150, 50);
     [button2 setBackgroundColor:[UIColor redColor]];
     
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button3 setTitle:@"读取本地音乐" forState:UIControlStateNormal];
+    [button3 setTitle:@"合成" forState:UIControlStateNormal];
     [button3.titleLabel sizeToFit];
-    [button3 addTarget:self action:@selector(readMusic) forControlEvents:UIControlEventTouchUpInside];
+    [button3 addTarget:self action:@selector(addMusic) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button3];
     button3.frame = CGRectMake(SCREEN_WIDTH*0.5-75, 300, 150, 50);
     [button3 setBackgroundColor:[UIColor redColor]];
@@ -226,6 +226,28 @@
 //    AVAsset *secondAsset = [AVAsset assetWithURL:secondVideo];
     AVAsset *musciAsset = [AVAsset assetWithURL:musicPath];
     
+    // 判断输入视频方向
+//    NSUInteger degress = 0;
+//    NSArray *tracks = [firstAsset tracksWithMediaType:AVMediaTypeVideo];
+//    if([tracks count] > 0) {
+//        AVAssetTrack *videoTrack = [tracks objectAtIndex:0];
+//        CGAffineTransform t = videoTrack.preferredTransform;
+//
+//        if(t.a == 0 && t.b == 1.0 && t.c == -1.0 && t.d == 0){
+//            // Portrait
+//            degress = 90;
+//        }else if(t.a == 0 && t.b == -1.0 && t.c == 1.0 && t.d == 0){
+//            // PortraitUpsideDown
+//            degress = 270;
+//        }else if(t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == 1.0){
+//            // LandscapeRight
+//            degress = 0;
+//        }else if(t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+//            // LandscapeLeft
+//            degress = 180;
+//        }
+//    }
+    
     // 1 - Create AVMutableComposition object. This object will hold your AVMutableCompositionTrack instances.
     AVMutableComposition *mixComposition = [[AVMutableComposition alloc] init];
     // 2 - Video track
@@ -270,10 +292,15 @@
     }
     //end
     
+    // 控制视频方向
+    
+//    exporter.videoComposition = [self getVideoComposition:firstAsset];
     exporter.outputURL=url;
     exporter.outputFileType = AVFileTypeQuickTimeMovie;
     exporter.audioMix = videoAudioMixTools;
     exporter.shouldOptimizeForNetworkUse = YES;
+//    exporter.videoComposition = [self getVideoComposition:firstAsset withComposition:mixComposition withAvTrack:firstTrack];
+    
     [exporter exportAsynchronouslyWithCompletionHandler:^{
         dispatch_async(dispatch_get_main_queue(), ^{
             [self exportDidFinish:exporter];
@@ -306,6 +333,44 @@
         });
     }
 }
+
+// 根据视频方向决定输出视频大小
+- (AVMutableVideoComposition *)getVideoComposition:(AVAsset *)asset withComposition:(AVMutableComposition*)composition withAvTrack:(AVMutableCompositionTrack*)compositionVideoTrack{
+    AVAssetTrack *videoTrack = [[asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+    composition = [AVMutableComposition composition];
+    AVMutableVideoComposition *videoComposition = [AVMutableVideoComposition videoComposition];
+    CGSize videoSize = videoTrack.naturalSize;
+    
+    NSArray *tracks = [asset tracksWithMediaType:AVMediaTypeVideo];
+    if([tracks count] > 0) {
+        AVAssetTrack *videoTrack = [tracks objectAtIndex:0];
+        CGAffineTransform t = videoTrack.preferredTransform;
+        if((t.a == 0 && t.b == 1.0 && t.c == -1.0 && t.d == 0) ||
+           (t.a == 0 && t.b == -1.0 && t.c == 1.0 && t.d == 0)){
+            videoSize = CGSizeMake(videoSize.height, videoSize.width);
+        }
+    }
+    composition.naturalSize    = videoSize;
+    videoComposition.renderSize = videoSize;
+    videoComposition.frameDuration = CMTimeMakeWithSeconds( 1 / videoTrack.nominalFrameRate, 600);
+    
+//    AVMutableCompositionTrack *compositionVideoTrack;
+    compositionVideoTrack = [composition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+    [compositionVideoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, asset.duration) ofTrack:videoTrack atTime:kCMTimeZero error:nil];
+    AVMutableVideoCompositionLayerInstruction *layerInst;
+    layerInst = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:videoTrack];
+    [layerInst setTransform:videoTrack.preferredTransform atTime:kCMTimeZero];
+    AVMutableVideoCompositionInstruction *inst = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
+    inst.timeRange = CMTimeRangeMake(kCMTimeZero, asset.duration);
+    inst.layerInstructions = [NSArray arrayWithObject:layerInst];
+    videoComposition.instructions = [NSArray arrayWithObject:inst];
+    return videoComposition;
+}
+
+//作者：百里潋長
+//链接：https://www.jianshu.com/p/4a6149c6087e
+//來源：简书
+//著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

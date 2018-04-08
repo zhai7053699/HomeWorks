@@ -10,8 +10,5 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface AddVideo : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,MPMediaPickerControllerDelegate>
-{
-    
-}
 
 @end
