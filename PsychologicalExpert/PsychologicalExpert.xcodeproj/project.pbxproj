@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		173AC874207B5EFF00C19394 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 173AC873207B5EFF00C19394 /* AppDelegate.m */; };
+		173AC877207B5EFF00C19394 /* PsyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 173AC876207B5EFF00C19394 /* PsyViewController.m */; };
+		173AC87A207B5EFF00C19394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173AC878207B5EFF00C19394 /* Main.storyboard */; };
+		173AC87C207B5F0100C19394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173AC87B207B5F0100C19394 /* Assets.xcassets */; };
+		173AC87F207B5F0100C19394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173AC87D207B5F0100C19394 /* LaunchScreen.storyboard */; };
+		173AC882207B5F0100C19394 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 173AC881207B5F0100C19394 /* main.m */; };
+		173AC88C207B5F0100C19394 /* PsychologicalExpertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 173AC88B207B5F0100C19394 /* PsychologicalExpertTests.m */; };
+		173AC897207B5F0100C19394 /* PsychologicalExpertUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 173AC896207B5F0100C19394 /* PsychologicalExpertUITests.m */; };
+		173AC8AF207B689B00C19394 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 173AC8AD207B689A00C19394 /* FaceView.m */; };
+		173AC8B2207B691A00C19394 /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 173AC8B0207B691A00C19394 /* HappinessViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		173AC888207B5F0100C19394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 173AC867207B5EFF00C19394 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 173AC86E207B5EFF00C19394;
+			remoteInfo = PsychologicalExpert;
+		};
+		173AC893207B5F0100C19394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 173AC867207B5EFF00C19394 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 173AC86E207B5EFF00C19394;
+			remoteInfo = PsychologicalExpert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		173AC86F207B5EFF00C19394 /* PsychologicalExpert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychologicalExpert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		173AC872207B5EFF00C19394 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		173AC873207B5EFF00C19394 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		173AC875207B5EFF00C19394 /* PsyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PsyViewController.h; sourceTree = "<group>"; };
+		173AC876207B5EFF00C19394 /* PsyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PsyViewController.m; sourceTree = "<group>"; };
+		173AC879207B5EFF00C19394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		173AC87B207B5F0100C19394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		173AC87E207B5F0100C19394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		173AC880207B5F0100C19394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		173AC881207B5F0100C19394 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		173AC887207B5F0100C19394 /* PsychologicalExpertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychologicalExpertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		173AC88B207B5F0100C19394 /* PsychologicalExpertTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PsychologicalExpertTests.m; sourceTree = "<group>"; };
+		173AC88D207B5F0100C19394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		173AC892207B5F0100C19394 /* PsychologicalExpertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychologicalExpertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		173AC896207B5F0100C19394 /* PsychologicalExpertUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PsychologicalExpertUITests.m; sourceTree = "<group>"; };
+		173AC898207B5F0100C19394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		173AC8AA207B689A00C19394 /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		173AC8AD207B689A00C19394 /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
+		173AC8B0207B691A00C19394 /* HappinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
+		173AC8B1207B691A00C19394 /* HappinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappinessViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		173AC86C207B5EFF00C19394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		173AC884207B5F0100C19394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		173AC88F207B5F0100C19394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		173AC866207B5EFF00C19394 = {
+			isa = PBXGroup;
+			children = (
+				173AC871207B5EFF00C19394 /* PsychologicalExpert */,
+				173AC88A207B5F0100C19394 /* PsychologicalExpertTests */,
+				173AC895207B5F0100C19394 /* PsychologicalExpertUITests */,
+				173AC870207B5EFF00C19394 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		173AC870207B5EFF00C19394 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				173AC86F207B5EFF00C19394 /* PsychologicalExpert.app */,
+				173AC887207B5F0100C19394 /* PsychologicalExpertTests.xctest */,
+				173AC892207B5F0100C19394 /* PsychologicalExpertUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		173AC871207B5EFF00C19394 /* PsychologicalExpert */ = {
+			isa = PBXGroup;
+			children = (
+				173AC8B1207B691A00C19394 /* HappinessViewController.h */,
+				173AC8B0207B691A00C19394 /* HappinessViewController.m */,
+				173AC8AA207B689A00C19394 /* FaceView.h */,
+				173AC8AD207B689A00C19394 /* FaceView.m */,
+				173AC872207B5EFF00C19394 /* AppDelegate.h */,
+				173AC873207B5EFF00C19394 /* AppDelegate.m */,
+				173AC875207B5EFF00C19394 /* PsyViewController.h */,
+				173AC876207B5EFF00C19394 /* PsyViewController.m */,
+				173AC878207B5EFF00C19394 /* Main.storyboard */,
+				173AC87B207B5F0100C19394 /* Assets.xcassets */,
+				173AC87D207B5F0100C19394 /* LaunchScreen.storyboard */,
+				173AC880207B5F0100C19394 /* Info.plist */,
+				173AC881207B5F0100C19394 /* main.m */,
+			);
+			path = PsychologicalExpert;
+			sourceTree = "<group>";
+		};
+		173AC88A207B5F0100C19394 /* PsychologicalExpertTests */ = {
+			isa = PBXGroup;
+			children = (
+				173AC88B207B5F0100C19394 /* PsychologicalExpertTests.m */,
+				173AC88D207B5F0100C19394 /* Info.plist */,
+			);
+			path = PsychologicalExpertTests;
+			sourceTree = "<group>";
+		};
+		173AC895207B5F0100C19394 /* PsychologicalExpertUITests */ = {
+			isa = PBXGroup;
+			children = (
+				173AC896207B5F0100C19394 /* PsychologicalExpertUITests.m */,
+				173AC898207B5F0100C19394 /* Info.plist */,
+			);
+			path = PsychologicalExpertUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		173AC86E207B5EFF00C19394 /* PsychologicalExpert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 173AC89B207B5F0100C19394 /* Build configuration list for PBXNativeTarget "PsychologicalExpert" */;
+			buildPhases = (
+				173AC86B207B5EFF00C19394 /* Sources */,
+				173AC86C207B5EFF00C19394 /* Frameworks */,
+				173AC86D207B5EFF00C19394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PsychologicalExpert;
+			productName = PsychologicalExpert;
+			productReference = 173AC86F207B5EFF00C19394 /* PsychologicalExpert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		173AC886207B5F0100C19394 /* PsychologicalExpertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 173AC89E207B5F0100C19394 /* Build configuration list for PBXNativeTarget "PsychologicalExpertTests" */;
+			buildPhases = (
+				173AC883207B5F0100C19394 /* Sources */,
+				173AC884207B5F0100C19394 /* Frameworks */,
+				173AC885207B5F0100C19394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				173AC889207B5F0100C19394 /* PBXTargetDependency */,
+			);
+			name = PsychologicalExpertTests;
+			productName = PsychologicalExpertTests;
+			productReference = 173AC887207B5F0100C19394 /* PsychologicalExpertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		173AC891207B5F0100C19394 /* PsychologicalExpertUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 173AC8A1207B5F0100C19394 /* Build configuration list for PBXNativeTarget "PsychologicalExpertUITests" */;
+			buildPhases = (
+				173AC88E207B5F0100C19394 /* Sources */,
+				173AC88F207B5F0100C19394 /* Frameworks */,
+				173AC890207B5F0100C19394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				173AC894207B5F0100C19394 /* PBXTargetDependency */,
+			);
+			name = PsychologicalExpertUITests;
+			productName = PsychologicalExpertUITests;
+			productReference = 173AC892207B5F0100C19394 /* PsychologicalExpertUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		173AC867207B5EFF00C19394 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "翟永胜";
+				TargetAttributes = {
+					173AC86E207B5EFF00C19394 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					173AC886207B5F0100C19394 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 173AC86E207B5EFF00C19394;
+					};
+					173AC891207B5F0100C19394 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 173AC86E207B5EFF00C19394;
+					};
+				};
+			};
+			buildConfigurationList = 173AC86A207B5EFF00C19394 /* Build configuration list for PBXProject "PsychologicalExpert" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 173AC866207B5EFF00C19394;
+			productRefGroup = 173AC870207B5EFF00C19394 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				173AC86E207B5EFF00C19394 /* PsychologicalExpert */,
+				173AC886207B5F0100C19394 /* PsychologicalExpertTests */,
+				173AC891207B5F0100C19394 /* PsychologicalExpertUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		173AC86D207B5EFF00C19394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				173AC87F207B5F0100C19394 /* LaunchScreen.storyboard in Resources */,
+				173AC87C207B5F0100C19394 /* Assets.xcassets in Resources */,
+				173AC87A207B5EFF00C19394 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		173AC885207B5F0100C19394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		173AC890207B5F0100C19394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		173AC86B207B5EFF00C19394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				173AC877207B5EFF00C19394 /* PsyViewController.m in Sources */,
+				173AC882207B5F0100C19394 /* main.m in Sources */,
+				173AC8AF207B689B00C19394 /* FaceView.m in Sources */,
+				173AC874207B5EFF00C19394 /* AppDelegate.m in Sources */,
+				173AC8B2207B691A00C19394 /* HappinessViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		173AC883207B5F0100C19394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				173AC88C207B5F0100C19394 /* PsychologicalExpertTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		173AC88E207B5F0100C19394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				173AC897207B5F0100C19394 /* PsychologicalExpertUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		173AC889207B5F0100C19394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 173AC86E207B5EFF00C19394 /* PsychologicalExpert */;
+			targetProxy = 173AC888207B5F0100C19394 /* PBXContainerItemProxy */;
+		};
+		173AC894207B5F0100C19394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 173AC86E207B5EFF00C19394 /* PsychologicalExpert */;
+			targetProxy = 173AC893207B5F0100C19394 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		173AC878207B5EFF00C19394 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				173AC879207B5EFF00C19394 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		173AC87D207B5F0100C19394 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				173AC87E207B5F0100C19394 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		173AC899207B5F0100C19394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		173AC89A207B5F0100C19394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		173AC89C207B5F0100C19394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5L8ZZ6FDN2;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PsychologicalExpert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yongsheng.owner.com.PsychologicalExpert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		173AC89D207B5F0100C19394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5L8ZZ6FDN2;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PsychologicalExpert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yongsheng.owner.com.PsychologicalExpert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		173AC89F207B5F0100C19394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PsychologicalExpertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yongsheng.owner.com.PsychologicalExpertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PsychologicalExpert.app/PsychologicalExpert";
+			};
+			name = Debug;
+		};
+		173AC8A0207B5F0100C19394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PsychologicalExpertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yongsheng.owner.com.PsychologicalExpertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PsychologicalExpert.app/PsychologicalExpert";
+			};
+			name = Release;
+		};
+		173AC8A2207B5F0100C19394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PsychologicalExpertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yongsheng.owner.com.PsychologicalExpertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PsychologicalExpert;
+			};
+			name = Debug;
+		};
+		173AC8A3207B5F0100C19394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PsychologicalExpertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yongsheng.owner.com.PsychologicalExpertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PsychologicalExpert;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		173AC86A207B5EFF00C19394 /* Build configuration list for PBXProject "PsychologicalExpert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				173AC899207B5F0100C19394 /* Debug */,
+				173AC89A207B5F0100C19394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		173AC89B207B5F0100C19394 /* Build configuration list for PBXNativeTarget "PsychologicalExpert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				173AC89C207B5F0100C19394 /* Debug */,
+				173AC89D207B5F0100C19394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		173AC89E207B5F0100C19394 /* Build configuration list for PBXNativeTarget "PsychologicalExpertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				173AC89F207B5F0100C19394 /* Debug */,
+				173AC8A0207B5F0100C19394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		173AC8A1207B5F0100C19394 /* Build configuration list for PBXNativeTarget "PsychologicalExpertUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				173AC8A2207B5F0100C19394 /* Debug */,
+				173AC8A3207B5F0100C19394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 173AC867207B5EFF00C19394 /* Project object */;
+}

@@ -6,7 +6,7 @@
 //  Copyright © 2018年 翟永胜. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HappinessViewController.h"
 #import "FaceView.h"
 
 @interface ViewController () <FaceViewDataSource>
