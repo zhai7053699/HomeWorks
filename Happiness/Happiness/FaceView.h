@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class FaceView;
+// 协议
+@protocol FaceViewDataSource
+- (float) smileForFaceView:(FaceView*) sender;
+@end
+
 @interface FaceView : UIView
 
 @property (nonatomic) CGFloat scale; // 公有属性，改变脸的大小
 
 - (void) pinch:(UIPinchGestureRecognizer*) gesture;
+
+@property (nonatomic,weak) IBOutlet id <FaceViewDataSource> dataSource;
 
 @end
