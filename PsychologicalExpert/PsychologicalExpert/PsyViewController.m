@@ -23,9 +23,16 @@
     [self performSegueWithIdentifier:@"ShowDiagnosis" sender:self];
 }
 
+// 系统api，
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowDiagnosis"]){
         [segue.destinationViewController setHappiness:self.diagmosis];
+    } else if  ([segue.identifier isEqualToString:@"showhappy"]) {
+        [segue.destinationViewController setHappiness:100];
+    }else if  ([segue.identifier isEqualToString:@"showgood"]) {
+        [segue.destinationViewController setHappiness:50];
+    }else if  ([segue.identifier isEqualToString:@"showsad"]) {
+        [segue.destinationViewController setHappiness:0];
     }
 }
 

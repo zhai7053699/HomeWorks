@@ -22,7 +22,7 @@
 
 - (float) smileForFaceView:(FaceView*) sender {
     
-    return (self.happiness - 50) / 50;
+    return (self.happiness - 50.0) / 50.0; // 50 和 50.0 区别很大，直接影响到显示效果
     
 }
 
