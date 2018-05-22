@@ -31,11 +31,12 @@
     [self.faceView setNeedsDisplay]; // draw rect
 }
 
+// property faceView的set方法
 - (void) setFaceView:(FaceView *)faceView {
     _faceView = faceView;
     // 注册缩放大小回调函数
     [self.faceView addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:self.faceView action:@selector(pinch:)]];
-    // 注册手势识别
+    // 注册手势识别 滑动
     [self.faceView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleHappinessGesture:)]];
 
     // 定义自己的协议
